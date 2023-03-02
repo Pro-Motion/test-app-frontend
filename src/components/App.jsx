@@ -1,4 +1,5 @@
 // import { AuthPage } from 'pages/AuthPage';
+import { Civillian } from 'pages/Civillian';
 import { Home } from 'pages/Home';
 // import axios from 'axios';
 import { Routes, Route } from 'react-router-dom';
@@ -24,6 +25,7 @@ export const App = () => {
         {/* <Route path="/auth" element={<AuthPage />} /> */}
         <Route path="/" element={<Sharedlayout />}>
           <Route index element={<Home />} />
+          <Route path="/civ" element={<Civillian />} />
         </Route>
       </Routes>
     </>

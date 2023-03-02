@@ -6,7 +6,7 @@ export const Sharedlayout = () => {
         <nav>header navigation</nav>
       </header>
       <main>
-        <div>
+        <div style={{ margin: '0 auto', padding: '0 15px' }}>
           <Outlet />
         </div>
       </main>
