@@ -1,8 +1,11 @@
 import { FormLayout } from 'components/FormLayout';
 import { hairColors } from 'constants';
+import { civilCharacters } from 'constants';
+import { skinColors } from 'constants';
 import { RACE } from 'constants';
 import { ABO_BLOOD, GENDERS } from 'constants';
 import { Field } from 'formik';
+// import styled from 'styled-components';
 
 export const Civillian = () => {
   const handleSubmit = (values, { resetForm }) => {
@@ -18,34 +21,35 @@ export const Civillian = () => {
 
           <FormLayout
             initValues={{
-              firstName: '',
-              lastName: '',
-              dateOfBirth: '',
-              placeOfBirth: '',
+              first_name: '',
+              last_name: '',
+              birthday: '',
+              place_of_birth: '',
               address: '',
-              gender: '',
-              skinColor: '',
-              race: '',
-              spouce: '',
-              bloodGroup: 'A+',
+              gender_id: '0',
+              skin_color_id: '0',
+              hair_color_id: '0',
+              race_id: '0',
+              spouse_uuid: '',
+              blood_group_id: '0',
             }}
             onSubmit={handleSubmit}
           >
             <label>
               First Name
-              <Field name="firstName" placeholder="first name" />
+              <Field name="first_name" placeholder="first name" />
             </label>
             <label>
               Last Name
-              <Field name="lastName" placeholder="last name" />
+              <Field name="last_name" placeholder="last name" />
             </label>
             <label>
               Date of Birth
-              <Field name="dateOfBirth" placeholder="date of birth" />
+              <Field name="birthday" placeholder="date of birth" />
             </label>
             <label>
               Place of Birth
-              <Field name="placeOfBirth" placeholder="place of birth" />
+              <Field name="place_of_birth" placeholder="place of birth" />
             </label>
             <label>
               Address
@@ -53,9 +57,9 @@ export const Civillian = () => {
             </label>
             <label>
               Gender
-              <Field name="gender" as="select">
+              <Field name="gender_id" as="select">
                 {GENDERS.map(({ id, gender }) => (
-                  <option key={id} value={gender}>
+                  <option key={id} value={id}>
                     {gender}
                   </option>
                 ))}
@@ -63,17 +67,20 @@ export const Civillian = () => {
             </label>
             <label>
               Skin Color
-              <Field name="skinColor" as="select">
-                <option value="White">White</option>
-                <option value="Black">Black</option>
-                <option value="Yellow">Yellow</option>
+              <Field name="skin_color_id" as="select">
+                {skinColors.map(({ id, color }) => (
+                  <option key={id} value={id}>
+                    {color}
+                  </option>
+                ))}
               </Field>
             </label>
+            {/*  */}
             <label>
               Hair Color
-              <Field name="hairColor" as="select">
+              <Field name="hair_color_id" as="select">
                 {hairColors.map(({ id, color }) => (
-                  <option key={id} value={color}>
+                  <option key={id} value={id}>
                     {color}
                   </option>
                 ))}
@@ -81,9 +88,9 @@ export const Civillian = () => {
             </label>
             <label>
               Race
-              <Field name="race" as="select">
+              <Field name="race_id" as="select">
                 {RACE.map(({ id, race }) => (
-                  <option key={id} value={race}>
+                  <option key={id} value={id}>
                     {race}
                   </option>
                 ))}
@@ -91,16 +98,16 @@ export const Civillian = () => {
             </label>
             <label>
               Spouse:
-              <Field name="spouce" as="select">
-                <option value="none">None</option>
-                <option value="spouse">Lorena Jamsy</option>
+              <Field name="spouse_uuid" as="select">
+                <option value="null">None</option>
+                <option value="spouseUUID">Lorena Jamsy</option>
               </Field>
             </label>
             <label>
               Blood Group:
-              <Field name="bloodGroup" as="select">
+              <Field name="blood_group_id" as="select">
                 {ABO_BLOOD.map(({ id, blood_group }) => (
-                  <option key={id} value={blood_group}>
+                  <option key={id} value={id}>
                     {blood_group}
                   </option>
                 ))}
@@ -109,7 +116,37 @@ export const Civillian = () => {
           </FormLayout>
         </div>
         <div>
-          <ul></ul>
+          <ul
+            style={{
+              display: 'flex',
+              gap: 15,
+            }}
+          >
+            {civilCharacters.map(
+              ({ civil_uuid, first_name, last_name, birthday, address }) => (
+                <li
+                  style={{
+                    border: 'black solid 1px',
+                    padding: 10,
+                  }}
+                  key={civil_uuid}
+                >
+                  <div>
+                    <h3>Character</h3>
+                    <p>
+                      Full name: <span>{`${first_name} ${last_name}`} </span>{' '}
+                    </p>
+                    <p>
+                      Birthday: <span>{birthday} </span>
+                    </p>
+                    <p>
+                      Adress: <span>{address} </span>
+                    </p>
+                  </div>
+                </li>
+              )
+            )}
+          </ul>
         </div>
       </div>
     </>

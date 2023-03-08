@@ -1,60 +1,112 @@
 export const ABO_BLOOD = [
   {
-    id: 5304,
+    id: 0,
     blood_group: 'A+',
   },
   {
-    id: 5984,
+    id: 1,
     blood_group: 'A-',
   },
   {
-    id: 5420,
+    id: 2,
     blood_group: 'B+',
   },
   {
-    id: 5694,
+    id: 3,
     blood_group: 'B-',
   },
   {
-    id: 5454,
+    id: 4,
     blood_group: 'AB+',
   },
   {
-    id: 5654,
+    id: 5,
     blood_group: 'AB-',
   },
   {
-    id: 5644,
+    id: 6,
     blood_group: 'O+',
   },
   {
-    id: 5487,
+    id: 7,
     blood_group: 'O-',
   },
 ];
 
 export const GENDERS = [
   {
-    id: 1,
+    id: 0,
     gender: 'Male',
   },
   {
-    id: 2,
+    id: 1,
     gender: 'Female',
+  },
+  {
+    id: 2,
+    gender: 'Other',
   },
 ];
 export const RACE = [
-  { id: 1, race: 'White' },
-  { id: 2, race: 'Asian' },
-  { id: 3, race: 'Black' },
-  { id: 4, race: 'Latino' },
-  { id: 5, race: 'Native American' },
+  { id: 0, race: 'White' },
+  { id: 1, race: 'Asian' },
+  { id: 2, race: 'Black' },
+  { id: 3, race: 'Latino' },
+  { id: 4, race: 'Native American' },
 ];
 export const hairColors = [
   { id: 0, color: 'Blonde' },
   { id: 1, color: 'Brunette' },
   { id: 2, color: 'Redhead' },
   { id: 3, color: 'Black' },
+];
+export const skinColors = [
+  {
+    id: 0,
+    color: 'White',
+  },
+  {
+    id: 1,
+    color: 'Black',
+  },
+  {
+    id: 2,
+    color: 'Yellow',
+  },
+  {
+    id: 3,
+    color: 'Brown',
+  },
+];
+export const civilCharacters = [
+  {
+    civil_uuid: 55454669588420,
+    address: 'Mirror Drive 7345',
+    birthday: '1989-04-13',
+    blood_group_id: '4',
+    first_name: 'Lorena',
+    gender_id: '1',
+    hair_color_id: '1',
+    last_name: 'Jamsy',
+    place_of_birth: 'Los Santos, SA',
+    race_id: '3',
+    skin_color_id: '3',
+    spouse_uuid: 56454669588421,
+  },
+  {
+    civil_uuid: 56454669588421,
+    address: 'Mirror Drive 7345',
+    birthday: '1990-06-22',
+    blood_group_id: '4',
+    first_name: 'John',
+    gender_id: '0',
+    hair_color_id: '1',
+    last_name: 'Jamsy',
+    place_of_birth: 'Los Santos, SA',
+    race_id: '0',
+    skin_color_id: '0',
+    spouse_uuid: '',
+  },
 ];
 //{
 //   "vin_number": "TESTvin001",
