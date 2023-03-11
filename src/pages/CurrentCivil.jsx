@@ -1,4 +1,4 @@
-import { WeaponsList } from "components/WeaponsList";
+import { WeaponsList } from 'components/WeaponsList';
 
 export const CurrentCivil = () => {
   return (
@@ -9,4 +9,5 @@ export const CurrentCivil = () => {
     <WeaponsList/>
   </section>
   </>);
+
 };

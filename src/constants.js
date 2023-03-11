@@ -78,9 +78,10 @@ export const skinColors = [
     color: 'Brown',
   },
 ];
+export const userUUID = '7d002170-bff1-11ed-afa1-0242ac120002';
 export const civilCharacters = [
   {
-    civil_uuid: 55454669588420,
+    civil_uuid: '20d205a6-4aa8-43a6-a0e6-61123a812a26',
     address: 'Mirror Drive 7345',
     birthday: '1989-04-13',
     blood_group_id: '4',
@@ -91,10 +92,10 @@ export const civilCharacters = [
     place_of_birth: 'Los Santos, SA',
     race_id: '3',
     skin_color_id: '3',
-    spouse_uuid: 56454669588421,
+    spouse_uuid: 'b8309739-5046-42f3-ba5c-a2d6d83dedb3',
   },
   {
-    civil_uuid: 56454669588421,
+    civil_uuid: 'b8309739-5046-42f3-ba5c-a2d6d83dedb3',
     address: 'Mirror Drive 7345',
     birthday: '1990-06-22',
     blood_group_id: '4',
