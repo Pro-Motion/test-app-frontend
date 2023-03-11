@@ -5,6 +5,7 @@ import { skinColors } from 'constants';
 import { RACE } from 'constants';
 import { ABO_BLOOD, GENDERS } from 'constants';
 import { Field } from 'formik';
+import { CurrentCivil } from './CurrentCivil';
 // import styled from 'styled-components';
 
 export const Civillian = () => {
@@ -125,10 +126,7 @@ export const Civillian = () => {
             {civilCharacters.map(
               ({ civil_uuid, first_name, last_name, birthday, address }) => (
                 <li
-                  style={{
-                    border: 'black solid 1px',
-                    padding: 10,
-                  }}
+                  
                   key={civil_uuid}
                 >
                   <div>
@@ -149,6 +147,9 @@ export const Civillian = () => {
           </ul>
         </div>
       </div>
+
+      <CurrentCivil/>
+      
     </>
   );
 };
