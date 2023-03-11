@@ -1,5 +1,6 @@
 // import { AuthPage } from 'pages/AuthPage';
 import { Civillian } from 'pages/Civillian';
+
 import { Home } from 'pages/Home';
 // import axios from 'axios';
 import { Routes, Route } from 'react-router-dom';
@@ -28,6 +29,8 @@ export const App = () => {
           <Route path="/civ" element={<Civillian />} />
         </Route>
       </Routes>
+
+      
     </>
   );
 };
