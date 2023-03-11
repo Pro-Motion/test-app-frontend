@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 
 const availableDepts = [
-  { id: 0, path: '/civ', dept: 'Civillian' },
-  { id: 1, path: '/police', dept: 'Police Officer' },
-  { id: 2, path: '/dispatch', dept: 'Dispatch' },
-  { id: 3, path: '/fire', dept: 'Fire Dept' },
+  { id: 0, path: 'civ', dept: 'Civillian' },
+  { id: 1, path: 'police', dept: 'Police Officer' },
+  { id: 2, path: 'dispatch', dept: 'Dispatch' },
+  { id: 3, path: 'fire', dept: 'Fire Dept' },
 ];
 export const Home = () => {
   return (
@@ -18,7 +18,7 @@ export const Home = () => {
       >
         {availableDepts.map(({ id, path, dept }) => (
           <li key={id}>
-            <Link to={path}>{dept}</Link>
+            <Link to={`${path}`}>{dept}</Link>
           </li>
         ))}
       </ul>

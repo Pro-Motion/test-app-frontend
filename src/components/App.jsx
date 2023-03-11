@@ -1,5 +1,6 @@
 // import { AuthPage } from 'pages/AuthPage';
 import { Civillian } from 'pages/Civillian';
+import { CurrentCivil } from 'pages/CurrentCivil';
 
 import { Home } from 'pages/Home';
 // import axios from 'axios';
@@ -26,11 +27,11 @@ export const App = () => {
         {/* <Route path="/auth" element={<AuthPage />} /> */}
         <Route path="/" element={<Sharedlayout />}>
           <Route index element={<Home />} />
-          <Route path="/civ" element={<Civillian />} />
+          <Route path="civ/" element={<Civillian />} />
+          <Route path="civ/:id" element={<CurrentCivil />} />
         </Route>
+        <Route path="*" element={<Home />}></Route>
       </Routes>
-
-      
     </>
   );
 };

@@ -5,7 +5,7 @@ import { skinColors } from 'constants';
 import { RACE } from 'constants';
 import { ABO_BLOOD, GENDERS } from 'constants';
 import { Field } from 'formik';
-import { CurrentCivil } from './CurrentCivil';
+import { NavLink } from 'react-router-dom';
 // import styled from 'styled-components';
 
 export const Civillian = () => {
@@ -125,11 +125,8 @@ export const Civillian = () => {
           >
             {civilCharacters.map(
               ({ civil_uuid, first_name, last_name, birthday, address }) => (
-                <li
-                  
-                  key={civil_uuid}
-                >
-                  <div>
+                <li key={civil_uuid}>
+                  <NavLink to={`${civil_uuid}`}>
                     <h3>Character</h3>
                     <p>
                       Full name: <span>{`${first_name} ${last_name}`} </span>{' '}
@@ -140,16 +137,13 @@ export const Civillian = () => {
                     <p>
                       Adress: <span>{address} </span>
                     </p>
-                  </div>
+                  </NavLink>
                 </li>
               )
             )}
           </ul>
         </div>
       </div>
-
-      <CurrentCivil/>
-      
     </>
   );
 };
