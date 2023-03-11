@@ -11,7 +11,7 @@ export const DateTimePickerValue = () => {
 
   return (
     <div style={{ width: 300 }}>
-      <p>Select license validity date</p>
+      <h5>Select license validity date</h5>
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <DemoContainer components={['DateTimePicker', 'DateTimePicker']}>
           <DateTimePicker
@@ -26,8 +26,8 @@ export const DateTimePickerValue = () => {
           />
         </DemoContainer>
       </LocalizationProvider>
-      <p>from /valueStart/</p>
-      <p>to /valueEnd/</p>
+      <p style={{fontSize: 16}}>from /valueStart/</p>
+      <p style={{fontSize: 16}}>to /valueEnd/</p>
     </div>
   );
 };
